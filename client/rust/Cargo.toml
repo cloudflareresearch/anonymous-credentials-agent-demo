@@ -1,0 +1,27 @@
+[package]
+name = "act-client-demo"
+version = "0.1.0"
+edition = "2024"
+authors = ["Armando Faz <armfazh@cloudflare.com>"]
+license = "Apache-2.0"
+description = "PoC Client for Anonymous Credit Tokens built on Cloudflare Workers"
+repository = "https://github.com/cloudflareresearch/anonymous-credentials-agent-demo"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.100"
+anonymous-credit-tokens = { git = "https://github.com/SamuelSchlesinger/anonymous-credit-tokens", rev="db7f48f21e6527cba2e6811beb6b3430f1435f7a" }
+curve25519-dalek = { version = "4.1.3", features = ["group", "ff", "digest", "zeroize", "precomputed-tables"] }
+rand_core = { version = "0.6.4", features = ["getrandom"] }
+rand = "0.6.4"
+hex = "0.4.3"
+
+# Passing feature flags to enable support for Wasm.
+getrandom_0_2_16 = { package = "getrandom", version = "0.2.16", features = [
+    "js",
+] }
+getrandom_0_3_3 = { package = "getrandom", version = "0.3.3", features = [
+    "wasm_js",
+] }

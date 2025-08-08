@@ -1,0 +1,15 @@
+{
+	"name": "act-issuer-demo",
+	"version": "0.1.0",
+	"author": "Armando Faz <armfazh@cloudflare.com>",
+	"repository": "https://github.com/cloudflareresearch/anonymous-credentials-agent-demo",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev"
+	},
+	"devDependencies": {
+		"wrangler": "4.45.1"
+	}
+}

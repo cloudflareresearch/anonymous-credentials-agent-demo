@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "act": {
+      "command": "cargo",
+      "args": ["run", "--bin", "act-mcp-server"],
+      "cwd": "${workspaceFolder}/act-mcp-server"
+    }
+  }
+}

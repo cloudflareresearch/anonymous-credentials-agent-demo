@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACT Demo -- Cloudflare Research</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo {
+      font-size: 2.25rem;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .hero p {
+      color: #4b5563;
+      margin-bottom: 2rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      transition: background-color 0.2s;
+    }
+
+    .button-primary {
+      background-color: #111827;
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background-color: #1f2937;
+    }
+
+    .button-secondary {
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+
+    .button-secondary:hover {
+      background-color: #e5e7eb;
+    }
+
+    .separator {
+      height: 1px;
+      background-color: #e5e7eb;
+      margin: 0 1.5rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section h3 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-container {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .font-medium {
+        --tw-font-weight: var(--font-weight-medium);
+        font-weight: var(--font-weight-medium)
+    }
+
+    details {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 0;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #6b7280;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 3rem;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+
+    .faq-content {
+      color: #4b5563;
+      padding: 1rem 0;
+      padding-right: 2rem;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .resource-card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+
+    .resource-card p {
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .resource-link {
+      color: #111827;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <span class="logo">🦊</span>
+        <h1>ACT Demo — Cloudflare Research</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>ACT Credentials</h2>
+        <p>
+          A privacy-preserving authentication protocol that enables numerical credit systems without tracking individual clients
+        </p>
+        <div class="button-group">
+          <a href="https://act-client-demo.cloudflareresearch.com/" class="button button-primary">Get Started</a>
+          <a href="https://blog.cloudflare.com/private-rate-limiting" class="button button-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="separator"></div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq-about-grid">
+      <div class="faq-container">
+        <details>
+          <summary>What is the main use case?</summary>
+          <div class="faq-content">
+            Enables to rate limit users trying to access a resource.
+          </div>
+        </details>
+
+        <details>
+          <summary>Does the user's identity gets protected?</summary>
+          <div class="faq-content">
+            Yes, server cannot determine which user is spending credits.
+          </div>
+        </details>
+
+        <details>
+          <summary>How does the two-step process work?</summary>
+          <div class="faq-content">
+            Simply request credits first, then spend them as needed. The process is streamlined for efficiency.
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I revoke tokens after issuance?</summary>
+          <div class="faq-content">
+            Yes, ACT tokens provides token revocation capabilities. The credit value of revoked tokens is set to zero.
+          </div>
+        </details>
+
+        <details>
+          <summary>I want to know more or to contribute.</summary>
+          <div class="faq-content">
+            Reach the Cloudflare Research Team.
+          </div>
+        </details>
+      </div>
+
+      <aside class="about-sidebar">
+          <h4>About this Website</h4>
+          <p>
+            This simple demo website that shows how a credit system can be used in a browser environment.
+            The same functionality can be applied to a service fetching resources from an API endpoint.
+          </p>
+          <p>
+            Cloudflare Research team is currently investigating about anonymous credential systems.
+          <p>
+          <div class="space-y-2">
+          <p class="font-medium">Contact Information:</p>
+          <p class="text-muted-foreground">
+            <a href="mailto:ask-research@cloudflare.com">ask-research@cloudflare.com</a>
+          </p>
+          <p class="text-muted-foreground">Version 0.1.0</p>
+          </div>
+          </p>
+      </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="separator"></div>
+
+  <!-- Resources/Links Section -->
+  <section id="documentation" class="section">
+    <div class="container">
+      <h3>Documentation & Resources</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4>📖 ACT Specification</h4>
+          <p>
+            ACT specification is under development at Privacy Pass working group.
+          </p>
+          <a href="https://datatracker.ietf.org/doc/draft-schlesinger-cfrg-act/" class="resource-link">View API Docs →</a>
+        </div>
+
+        <div class="resource-card">
+          <h4>🚀 Quick Start</h4>
+          <p>
+            Start playing by entering to the Client website.
+          </p>
+          <a href="https://act-client-demo.cloudflareresearch.com/" class="resource-link">Get Started →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>

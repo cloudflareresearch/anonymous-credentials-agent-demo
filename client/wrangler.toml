@@ -1,0 +1,12 @@
+name = "act-client-demo"
+compatibility_date = "2025-10-27"
+
+[assets]
+directory = "./dist"
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "act-client-demo.cloudflareresearch.com"
+custom_domain = true

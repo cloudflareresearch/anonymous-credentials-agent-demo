@@ -1,0 +1,32 @@
+{
+  "name": "act-client-demo",
+  "version": "0.1.0",
+  "author": "Armando Faz <armfazh@cloudflare.com>",
+  "repository": "https://github.com/cloudflareresearch/anonymous-credentials-agent-demo",
+  "dependencies": {
+    "@radix-ui/react-label": "2.1.7",
+    "@radix-ui/react-separator": "1.1.7",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.548.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.9.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react-swc": "4.2.0",
+    "unimported": "1.31.0",
+    "vite": "7.1.12",
+    "wrangler": "4.45.1"
+  },
+  "scripts": {
+    "build:wasm": "wasm-pack build --release --target web --no-pack --out-dir ../src/wasm ./rust",
+    "build:react": "vite build",
+    "build": "npm run build:wasm && npm run build:react",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  }
+}
