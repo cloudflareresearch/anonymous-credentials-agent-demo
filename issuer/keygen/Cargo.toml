@@ -1,0 +1,13 @@
+[package]
+name = "act-issuer-keygen-demo"
+version = "0.1.0"
+edition = "2024"
+authors = ["Armando Faz <armfazh@cloudflare.com>"]
+license = "Apache-2.0"
+description = "PoC Issuer for Anonymous Credit Tokens built on Cloudflare Workers"
+repository = "https://github.com/cloudflareresearch/anonymous-credentials-agent-demo"
+
+[dependencies]
+anonymous-credit-tokens = { git = "https://github.com/SamuelSchlesinger/anonymous-credit-tokens", rev="db7f48f21e6527cba2e6811beb6b3430f1435f7a" }
+rand_core = { version = "0.6.4", features = ["getrandom"] }
+hex = "0.4.3"

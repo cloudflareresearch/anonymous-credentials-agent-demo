@@ -7,7 +7,9 @@
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
-		"start": "wrangler dev"
+		"start": "wrangler dev",
+		"keygen": "cargo run --manifest-path ./keygen/Cargo.toml issuer_key.txt",
+		"upload-keygen": "cat issuer_key.txt | wrangler secret put ISSUER_PRIVATEKEY_CBOR_HEX"
 	},
 	"devDependencies": {
 		"wrangler": "4.45.1"
